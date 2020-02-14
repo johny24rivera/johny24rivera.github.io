@@ -2,10 +2,6 @@ var languageCanvas = document.getElementById("languages");
 languageCanvas.width = 300;
 languageCanvas.height = 300;
 
-var webCanvas = document.getElementById("web");
-webCanvas.width = 300;
-webCanvas.height = 300;
-
 var ctx = languageCanvas.getContext("2d");
 
 function drawLine(ctx, startX, startY, endX, endY, color) {
@@ -129,15 +125,5 @@ var myBarchart = new Barchart({
     colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743"]
 });
 
-var webBarchart = new Barchart({
-    canvas: webCanvas,
-    seriesName: "Web Languages",
-    padding: 20,
-    gridScale: 5,
-    gridColor: "#eeeeee",
-    data: myWebLanguages,
-    colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743"]
-});
 
 myBarchart.draw();
-webBarchart.draw();
