@@ -1,0 +1,26 @@
+body {
+    max-width: 100%;
+}
+
+#aboutMe,
+#tools {
+    max-width: 100%;
+    height: auto;
+    margin: 25px;
+}
+
+#profilePic {
+    width: 300px;
+    height: auto;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    float: left;
+}
+
+#aboutMe p {
+    font-size: 1.5em;
+}
+
+#aboutMe h1 {
+    font-size: 3em;
+}

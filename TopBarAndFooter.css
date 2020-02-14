@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    max-width: 100%;
+}
+
+#topBar {
+    margin: 0;
+    background-color: coral;
+    max-width: 100%;
+    height: 75px;
+    display: flex;
+}
+
+.tab {
+    display: flex;
+    height: 100%;
+    width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.25em;
+    align-content: center;
+    justify-content: center;
+}
+
+.tab:hover {
+    background-color: orange;
+    color: white;
+}
+
+.tab a {
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
