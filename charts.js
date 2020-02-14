@@ -1,8 +1,12 @@
-var myCanvas = document.getElementById("myCanvas");
-myCanvas.width = 300;
-myCanvas.height = 300;
+var languageCanvas = document.getElementById("languages");
+languageCanvas.width = 300;
+languageCanvas.height = 300;
 
-var ctx = myCanvas.getContext("2d");
+var webCanvas = document.getElementById("web");
+webCanvas.width = 300;
+webCanvas.height = 300;
+
+var ctx = languageCanvas.getContext("2d");
 
 function drawLine(ctx, startX, startY, endX, endY, color) {
     ctx.save();
@@ -24,8 +28,15 @@ function drawBar(ctx, upperLeftCornerX, upperLeftCornerY, width, height, color) 
 var myProgrammingLanguages = {
     "C/C++": 9,
     "Python": 8,
-    "Java": 7,
-}
+    "Java": 7
+};
+
+var myWebLanguages = {
+    "HTML": 9,
+    "CSS": 9,
+    "JavaScript": 7,
+    "Android XML": 5
+};
 
 var Barchart = function(options) {
     this.options = options;
@@ -83,16 +94,50 @@ var Barchart = function(options) {
 
             barIndex++;
         }
+        this.ctx.save();
+        this.ctx.textBaseline = "bottom";
+        this.ctx.textAlign = "center";
+        this.ctx.fillStyle = "#000000";
+        this.ctx.font = "bold 14px Arial";
+        this.ctx.fillText(this.options.seriesName, this.canvas.width / 2, this.canvas.height);
+        this.ctx.restore();
 
+        //draw legend
+        barIndex = 0;
+        var legend = document.querySelector("legend[for='myCanvas']");
+        var ul = document.createElement("ul");
+        legend.append(ul);
+        for (categ in this.options.data) {
+            var li = document.createElement("li");
+            li.style.listStyle = "none";
+            li.style.borderLeft = "20px solid " + this.colors[barIndex % this.colors.length];
+            li.style.padding = "5px";
+            li.textContent = categ;
+            ul.append(li);
+            barIndex++;
+        }
     }
 }
 
 var myBarchart = new Barchart({
-    canvas: myCanvas,
-    padding: 10,
+    canvas: languageCanvas,
+    seriesName: "Programming Languages",
+    padding: 20,
     gridScale: 5,
     gridColor: "#eeeeee",
     data: myProgrammingLanguages,
     colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743"]
 });
+
+var webBarchart = new Barchart({
+    canvas: webCanvas,
+    seriesName: "Web Languages",
+    padding: 20,
+    gridScale: 5,
+    gridColor: "#eeeeee",
+    data: myWebLanguages,
+    colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743"]
+});
+
 myBarchart.draw();
+webBarchart.draw();
