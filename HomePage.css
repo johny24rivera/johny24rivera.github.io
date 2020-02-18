@@ -22,5 +22,11 @@ body {
 }
 
 #aboutMe h1 {
-    font-size: 3em;
+    font-size: 2em;
+}
+
+#tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
