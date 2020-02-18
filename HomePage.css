@@ -3,7 +3,8 @@ body {
 }
 
 #aboutMe,
-#tools {
+#tools,
+#quote {
     max-width: 100%;
     height: auto;
     margin: 25px;
@@ -29,4 +30,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+#quote header {
+    font-size: 3.5em;
+    text-align: center;
+}
+
+#quote p {
+    font-size: 2em;
+    text-align: end;
+    margin-right: 10%;
 }
