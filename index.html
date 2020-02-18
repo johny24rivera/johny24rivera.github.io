@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="TopBarAndFooter.css">
     <link rel="stylesheet" type="text/css" href="HomePage.css">
+    <link rel="stylesheet" type="text/css" href="barGraph.css">
     <title>GoldCode's Home Page</title>
 </head>
 
@@ -19,16 +20,59 @@
         <div class="tab"><a href="">Contact Me</a></div>
     </section>
     <section id="portfolio">
-        <div id="tools">
+        <section id="tools">
             <div>
                 <h2>Programming Languages</h2>
-                <canvas id="languages" style="background: white;"></canvas>
-                <legend for="languages"></legend>
+                <dl style="width: 300px">
+                    <dt>C/C++</dt>
+                    <dd>
+                        <div id="data-one" class="bar" style="width: 90%">90</div>
+                    </dd>
+                    <dt>Python</dt>
+                    <dd>
+                        <div id="data-two" class="bar" style="width: 95%">95</div>
+                    </dd>
+                    <dt>Java</dt>
+                    <dd>
+                        <div id="data-three" class="bar" style="width: 75%">75</div>
+                    </dd>
+                </dl>
             </div>
             <div>
+                <h2>Web & Markup Languages</h2>
+                <dl style="width: 300px">
+                    <dt>HTML</dt>
+                    <dd>
+                        <div id="data-one" class="bar" style="width: 80%">80</div>
+                    </dd>
+                    <dt>CSS</dt>
+                    <dd>
+                        <div id="data-two" class="bar" style="width: 90%">90</div>
+                    </dd>
+                    <dt>JavaScript</dt>
+                    <dd>
+                        <div id="data-three" class="bar" style="width: 70%">70</div>
+                    </dd>
+                </dl>
             </div>
-            <h2>Technologies</h2>
-        </div>
+            <div>
+                <h2>Technologies</h2>
+                <dl style="width: 300px">
+                    <dt>Git</dt>
+                    <dd>
+                        <div id="data-one" class="bar" style="width: 65%">65</div>
+                    </dd>
+                    <dt>Ubuntu</dt>
+                    <dd>
+                        <div id="data-two" class="bar" style="width: 75%">75</div>
+                    </dd>
+                    <dt>Windows</dt>
+                    <dd>
+                        <div id="data-three" class="bar" style="width: 90%">90</div>
+                    </dd>
+                </dl>
+            </div>
+        </section>
         <div id="aboutMe">
             <img src="Profile Picture.jpg" id="profilePic">
             <h1>About Me</h1>
