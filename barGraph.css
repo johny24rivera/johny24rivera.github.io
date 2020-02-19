@@ -14,8 +14,8 @@ dt {
     color: #fff;
     padding: 5px;
     text-align: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ff7617), to(#ba550f));
-    background-color: #ff7617;
+    background: -webkit-gradient(linear, left top, left bottom, from(coral), to(#ec7e2e));
+    background-color: coral;
     -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.25)));
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
