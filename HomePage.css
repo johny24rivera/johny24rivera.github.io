@@ -47,3 +47,18 @@ body {
     text-align: end;
     margin-right: 10%;
 }
+
+#Intro {
+    max-width: 100%;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Intro header {
+    font-size: 3em;
+}
